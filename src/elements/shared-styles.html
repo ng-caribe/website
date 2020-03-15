@@ -7,25 +7,25 @@
     <style>
       :host {
         --dark-primary-color: #512DA8;
-        --default-primary-color: #673AB7;
-        --focused-color: #311B92;
+        --default-primary-color: #4B5356;
+        --focused-color: #E7A736;
         --light-primary-color: #D1C4E9;
         --text-primary-color: #FFFFFF;
         --accent-color: #FF5252;
-        --primary-background-color: #FFFFFF;
+        --primary-background-color: #E5F4E3;
         --primary-text-color: #424242;
         --secondary-text-color: #757575;
         --disabled-text-color: #BDBDBD;
         --divider-color: #EDEDED;
-        --footer-background-color: #F5F5F5;
-        --footer-text-color: #616161;
-        --twitter-color: #4099FF;
-        --facebook-color: #3B5998;
+        --footer-background-color: #4B5356;
+        --footer-text-color: #FFFFFF;
+        --twitter-color: #FFFFFF;
+        --facebook-color: #FFFFFF;
         --border-light-color: #E2E2E2;
         --error-color: #e64a19;
 
         /* Custom */
-        --default-background-color: #FFFFFF;
+        --default-background-color: #E5F4E3;
         --secondary-background-color: #F5F5F5;
         --additional-background-color: #f7f7f7;
         --contrast-additional-background-color: #e8e8e8;
@@ -39,8 +39,8 @@
         --font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; /*TODO Change to Open Sans*/
         --max-container-width: 1280px;
 
-        --primary-color-transparent: rgba(103, 58, 183, 0.1);
-        --primary-color-light: rgba(103, 58, 183, 0.8);
+        --primary-color-transparent: rgba(231, 167, 54, 1);
+        --primary-color-light: rgba(231, 167, 54, 1);
         --primary-color-white: #EDE7F6;
 
         /* Labels */
@@ -99,11 +99,12 @@
         border-radius: 2px;
         font-size: 14px;
         color: var(--default-primary-color);
-        transition: background-color var(--animation);
+        transition: background-color var(--animation), color var(--animation);
       }
 
       paper-button:hover {
         background-color: var(--primary-color-transparent);
+        color: var(--text-primary-color);
       }
 
       paper-button[disabled] {
@@ -119,6 +120,7 @@
 
       paper-button[primary]:hover {
         background-color: var(--primary-color-light);
+        color: var(--text-primary-color)
       }
 
       paper-button[primary][invert] {
@@ -127,7 +129,8 @@
       }
 
       paper-button[primary][invert]:hover {
-        background-color: var(--primary-color-white);
+        color: var(--text-primary-color);
+        background-color: var(--focused-color);
       }
 
       paper-button[primary-text] {

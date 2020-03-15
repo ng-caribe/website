@@ -39,9 +39,8 @@
         display: block;
         width: 150px;
         height: 32px;
-        background-color: var(--default-primary-color);
+        background-color: var(--default-background-color);
         transition: background-color var(--animation);
-        -webkit-mask: url('/images/logo-monochrome.svg') no-repeat;
       }
 
       .nav-items {
@@ -123,16 +122,7 @@
     </style>
 
     <app-toolbar class="header">
-      <div>
-        <paper-icon-button
-          icon="hoverboard:menu"
-          hidden$="[[viewport.isLaptopPlus]]"
-          aria-label="menu"
-          on-tap="openDrawer"
-        ></paper-icon-button>
-      </div>
       <div layout horizontal center flex>
-        <a class="toolbar-logo" href="/" hidden$="[[!viewport.isLaptopPlus]]" layout horizontal title="{$ title $}"></a>
       </div>
 
       <paper-tabs
@@ -149,11 +139,11 @@
         </paper-tab>
         {% endfor %}
 
-        <paper-tab class="signin-tab" on-tap="signIn" link hidden$="[[user.signedIn]]">{$ signIn $}</paper-tab>
+<!--        <paper-tab class="signin-tab" on-tap="signIn" link hidden$="[[user.signedIn]]">{$ signIn $}</paper-tab>-->
 
-        <a href$="[[_getTicketUrl(tickets)]]" target="_blank" rel="noopener noreferrer" ga-on="click"
+        <a href="https://www.papercall.io/ngcaribe2020" target="_blank" rel="noopener noreferrer" ga-on="click"
            ga-event-category="ticket button" ga-event-action="buy_click">
-          <paper-button class="buy-button" primary>{$ buyTicket $}</paper-button>
+          <paper-button class="buy-button" primary> CFP NOW OPEN </paper-button>
         </a>
       </paper-tabs>
 

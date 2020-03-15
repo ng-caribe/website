@@ -1,7 +1,7 @@
 {
-  "name": "hoverboard",
-  "version": "2.1.0",
-  "description": "Conference website template",
+  "name": "ng-caribe-website",
+  "version": "0.0.1",
+  "description": "Conference website",
   "scripts": {
     "gulp": "gulp",
     "bower": "bower",
@@ -30,6 +30,8 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
+    "@angular/cli": "^8.3.23",
+    "@angular/core": "^8.2.14",
     "@babel/core": "^7.4.4",
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.4.4",
