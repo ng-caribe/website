@@ -10,7 +10,7 @@
   "webapp": {
     "shortName": "ngcaribe",
     "themeColor": "#673AB7",
-    "backgroundColor": "#e5f4e3"
+    "backgroundColor": "#E5F4E3"
   },
   "dateFormat": {
     "locale": "en-US"
@@ -26,7 +26,7 @@
   ],
   "heroSettings": {
     "home": {
-      "description": "The biggest (and first) Angular conference of the Caribbean!",
+      "description": "The biggest and first Angular conference of the Caribbean!",
       "background": {
         "color": "#e5f4e3",
         "image": "/images/backgrounds/home-2.jpg"
@@ -37,7 +37,7 @@
       "title": "Blog",
       "metaDescription": "Read stories from our team",
       "background": {
-        "color": "#FFF"
+        "color": "#E5F4E3"
       },
       "fontColor": "#424242"
     },
@@ -163,5 +163,9 @@
     "tickets": {
       "itemsCount": 0
     }
-  }
+  },
+  "showForkMeBlockForProjectIds": [
+    "hoverboard-master",
+    "hoverboard-dev"
+  ]
 }
