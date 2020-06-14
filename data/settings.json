@@ -163,5 +163,6 @@
     "tickets": {
       "itemsCount": 0
     }
-  }
+  },
+  "showForkMeBlockForProjectIds": ["hoverboard-master", "hoverboard-dev"]
 }
