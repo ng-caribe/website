@@ -7,10 +7,12 @@ if (!development) {
 }
 
 module.exports = {
+  appIndex: 'index.html',
+  babel: true,
+  fileExtensions: ['.ts'],
+  nodeResolve: true,
   port: 5000,
   watch: true,
-  nodeResolve: true,
-  appIndex: 'index.html',
   responseTransformers: [
     ({ url, status: _, contentType, body }) => {
       if (isTemplate({ url, contentType })) {
@@ -18,6 +20,16 @@ module.exports = {
       } else {
         return { body };
       }
+    },
+  ],
+  middlewares: [
+    function rewriteIndex(context, next) {
+      // node_modules are deployed as node_assets
+      if (context.url.startsWith('/node_assets/')) {
+        context.url = context.url.replace('/node_assets/', '/node_modules/');
+      }
+
+      return next();
     },
   ],
 };

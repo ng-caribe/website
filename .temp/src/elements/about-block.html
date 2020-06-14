@@ -1,0 +1,147 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../mixins/redux-mixin.html">
+<link rel="import" href="shared-animations.html">
+<link rel="import" href="hoverboard-icons.html">
+
+<dom-module id="about-block">
+  <template>
+    <style include="shared-styles flex flex-alignment flex-reverse">
+      :host {
+        display: block;
+      }
+
+      .container {
+        padding-top: 64px;
+      }
+
+      .content {
+        display: grid;
+        grid-gap: 32px;
+        grid-template-columns: 1fr;
+      }
+
+      .statistics-block {
+        width: 100%;
+        display: grid;
+        grid-gap: 32px 16px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .numbers {
+        font-size: 40px;
+      }
+
+      .numbers::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 64px;
+        background-color: var(--default-primary-color);
+      }
+
+      .label {
+        margin-top: 4px;
+      }
+
+      @media (min-width: 640px) {
+        .content {
+          grid-gap: 64px;
+          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        }
+
+        .statistics-block {
+          grid-gap: 32px;
+        }
+
+        .numbers {
+          font-size: 56px;
+        }
+      }
+
+    </style>
+
+    <div class="container">
+
+      <div class="content">
+
+        <div>
+          <h1 class="container-title">About</h1>
+          <p>ng-caribe is the biggest (and first) Angular conference dedicated to the Caribbean region. Bringing people from all over the world to talk about software under a nice warm sun.</p>
+          <a
+            href="https://www.youtube.com/playlist?list=PLt8lEzcLNl31AouwDkbLbLARlQFwNS2en"
+            ga-on="click"
+            ga-event-category="video"
+            ga-event-action="watch"
+            ga-event-label="about block - Explore featured session"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+<!--            <paper-button class="animated icon-right">-->
+<!--              <span class="cta-label">Explore featured session</span>-->
+<!--              <iron-icon icon="hoverboard:arrow-right-circle"></iron-icon>-->
+<!--            </paper-button>-->
+          </a>
+
+<!--          <p>Described by many as &#39;Google I/O of Ukraine&#39;, our team creates DevFest to be the best place for experience sharing in a phenomenal atmosphere.</p>-->
+<!--          <paper-button-->
+<!--            class="animated icon-right"-->
+<!--            on-tap="_playVideo"-->
+<!--            ga-on="click"-->
+<!--            ga-event-category="video"-->
+<!--            ga-event-action="watch"-->
+<!--            ga-event-label="about block - See how it was in 2016"-->
+<!--          >-->
+<!--            <span>See how it was in 2016</span>-->
+<!--            <iron-icon icon="hoverboard:arrow-right-circle"></iron-icon>-->
+<!--          </paper-button>-->
+        </div>
+
+        <div class="statistics-block">
+
+          <div class="item">
+            <div class="numbers">300</div>
+            <div class="label">Attendees</div>
+          </div>
+
+          <div class="item">
+            <div class="numbers">2</div>
+            <div class="label">Days</div>
+          </div>
+
+          <div class="item">
+            <div class="numbers">+30</div>
+            <div class="label">Sessions</div>
+          </div>
+
+          <div class="item">
+            <div class="numbers">4</div>
+            <div class="label">Tracks</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </template>
+
+  <script>
+    class AboutBlock extends ReduxMixin(Polymer.Element) {
+      static get is() {
+        return 'about-block';
+      }
+
+      _playVideo() {
+        uiActions.toggleVideoDialog({
+          title: '',
+          youtubeId: 'TdpbgRgz6eE',
+          disableControls: true,
+          opened: true,
+        });
+      }
+    }
+
+    window.customElements.define(AboutBlock.is, AboutBlock);
+  </script>
+</dom-module>

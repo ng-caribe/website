@@ -1,10 +1,10 @@
 {
   "title": "ng-caribe 2020",
-  "description": "The biggest (and first) Angular conference of the Caribbean!",
+  "description": "ngcaribe has been cancelled.",
   "image": "images/logos/ng-caribe-full-color.png",
   "keywords": "event, angular, javascript, caribbean, conference, typescript, nestjs, web, polymer, gde, ng-conf, google, programming, angular, web, polymer, developers, web, cloud, conference, typescript",
-  "dates": "June 19-20, 2020",
-  "partnershipProposition": "https://bit.ly/dfua17-partners",
+  "dates": "",
+  "partnershipProposition": "",
   "share": "Share",
   "followOur": "Follow our",
   "followUs": "Follow us",
@@ -57,7 +57,7 @@
   "subscribeNote": "No spam, only the latest news and updates!",
   "codeOfConduct": "Code of Conduct",
   "codeOfConductBlock": {
-    "organization": "DevFest",
+    "organization": "ng-caribe",
     "form": "https://bit.ly/2RstTJ8",
     "contacts": [
       "Christian Polanco, christian@friajs.com",
@@ -217,7 +217,7 @@
     "unsubscribe": "Unsubscribe",
     "enable": {
       "label": "Enable",
-      "link": "https://pushassist.com/knowledgebase/how-to-enable-or-disable-push-notifications-on-chrome-firefox-safari-b/"
+      "link": "https://support.google.com/chrome/answer/3220216"
     },
     "toast": {
       "title": "Open"

@@ -5,8 +5,8 @@
     "blog": "",
     "url": "http://ng-caribe.org/"
   },
-  "startDate": "2020-06-19T09:00:00-04:00",
-  "endDate": "2020-06-20T19:00:00-04:00",
+  "startDate": "",
+  "endDate": "",
   "webapp": {
     "shortName": "ngcaribe",
     "themeColor": "#673AB7",
@@ -31,7 +31,7 @@
   ],
   "heroSettings": {
     "home": {
-      "description": "The biggest and first Angular conference of the Caribbean!",
+      "description": "We're sad to announce that ng-caribe has been cancelled. :(",
       "background": {
         "color": "#e5f4e3",
         "image": "/images/backgrounds/home-2.jpg"
@@ -169,8 +169,5 @@
       "itemsCount": 0
     }
   },
-  "showForkMeBlockForProjectIds": [
-    "hoverboard-master",
-    "hoverboard-dev"
-  ]
+  "showForkMeBlockForProjectIds": ["hoverboard-master", "hoverboard-dev"]
 }

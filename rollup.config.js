@@ -7,7 +7,7 @@ import copy from 'rollup-plugin-copy';
 import indexHTMLPlugin from 'rollup-plugin-index-html';
 import replace from 'rollup-plugin-re';
 import { generateSW } from 'rollup-plugin-workbox';
-import { workboxConfig } from './workbox-config.js';
+import { workboxConfig } from './workbox-config';
 
 const { production, compileTemplate, compileBufferTemplate } = require('./build-utils.js');
 
@@ -16,7 +16,8 @@ if (!production) {
 }
 
 const config = createDefaultConfig({
-  input: './src/hoverboard-app.js',
+  input: './src/hoverboard-app.ts',
+  extensions: ['.js', '.mjs', '.ts'],
   plugins: {
     workbox: false,
   },
@@ -50,11 +51,11 @@ export default deepmerge(config, {
         },
         {
           src: 'node_modules/@webcomponents/webcomponentsjs/*.{js,map}',
-          dest: 'dist/node_modules/@webcomponents/webcomponentsjs',
+          dest: 'dist/node_assets/@webcomponents/webcomponentsjs',
         },
         {
           src: 'node_modules/firebase/*.{js,map}',
-          dest: 'dist/node_modules/firebase/',
+          dest: 'dist/node_assets/firebase/',
         },
         {
           src: 'src/service-worker-registration.js',
