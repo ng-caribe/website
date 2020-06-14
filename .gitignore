@@ -4,16 +4,16 @@ node_modules/
 .vscode/
 .firebase/
 .firebaserc
-serviceAccount.json
+serviceAccount-prod.json
 /appengine/dist/
 npm-debug.log
 **/*.log
 .DS_Store
 *firebase-adminsdk*
 .firebase/
-serviceAccount-dev.json
-serviceAccount-prod.json
 serviceAccount.json
+serviceAccount-prod.json
+serviceAccount-prod.json
 
 /bower_components/
 /.temp/

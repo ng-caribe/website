@@ -26,8 +26,8 @@ class FooterNav extends PolymerElement {
 
       .footer-logo {
         margin: 10px 30px 0 0;
-        height: 24px;
-        width: 120px;
+        height: 100px;
+        width: 100px;
         float: left;
       }
 
@@ -67,7 +67,7 @@ class FooterNav extends PolymerElement {
       <a href="{$ organizer.url $}" target="_blank" rel="noopener noreferrer">
         <plastic-image
           class="footer-logo"
-          srcset="../../images/organizer-logo.svg"
+          srcset="../../images/logos/logo-monochrome-dark.png"
           sizing="contain"
           alt="{$ organizer.name $}"
           lazy-load></plastic-image>

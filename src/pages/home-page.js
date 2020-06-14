@@ -140,35 +140,35 @@ class HomePage extends ScrollFunctions(ReduxMixin(PolymerElement)) {
       active="[[active]]"
       hide-logo>
       <div class="home-content" layout vertical center>
-        <plastic-image class="hero-logo" srcset="/images/logo.svg" alt="{$ title $}"></plastic-image>
+        <plastic-image class="hero-logo" srcset="/images/logos/ng-caribe-full-color.png" alt="{$ title $}"></plastic-image>
         <div class="info-items">
           <div class="info-item">{$ location.city $}. {$ dates $}</div>
           <div class="info-item">{$ heroSettings.home.description $}</div>
         </div>
 
 
-        <div class="action-buttons" layout horizontal center-justified wrap>
-          <paper-button
-            class="watch-video"
-            on-tap="_playVideo"
-            ga-on="click"
-            ga-event-category="video"
-            ga-event-action="watch"
-            ga-event-label="hero block - view highlights">
-            <iron-icon icon="hoverboard:movie"></iron-icon>
-            {$ viewHighlights $}
-          </paper-button>
-          <paper-button
-            on-tap="_scrollToTickets" ga-on="click"
-            ga-event-category="tickets"
-            ga-event-action="scroll"
-            ga-event-label="hero block - scroll to tickets"
-            primary
-            invert>
-            <iron-icon icon="hoverboard:ticket"></iron-icon>
-            {$ buyTicket $}
-          </paper-button>
-        </div>
+<!--        <div class="action-buttons" layout horizontal center-justified wrap>-->
+<!--          <paper-button-->
+<!--            class="watch-video"-->
+<!--            on-tap="_playVideo"-->
+<!--            ga-on="click"-->
+<!--            ga-event-category="video"-->
+<!--            ga-event-action="watch"-->
+<!--            ga-event-label="hero block - view highlights">-->
+<!--            <iron-icon icon="hoverboard:movie"></iron-icon>-->
+<!--            {$ viewHighlights $}-->
+<!--          </paper-button>-->
+<!--          <paper-button-->
+<!--            on-tap="_scrollToTickets" ga-on="click"-->
+<!--            ga-event-category="tickets"-->
+<!--            ga-event-action="scroll"-->
+<!--            ga-event-label="hero block - scroll to tickets"-->
+<!--            primary-->
+<!--            invert>-->
+<!--            <iron-icon icon="hoverboard:ticket"></iron-icon>-->
+<!--            {$ buyTicket $}-->
+<!--          </paper-button>-->
+<!--        </div>-->
 
         <div class="scroll-down" on-tap="_scrollNextBlock">
           <svg

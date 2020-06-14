@@ -1,6 +1,7 @@
 import '@polymer/app-route/app-route.js';
 import '@polymer/iron-pages';
-import { html, PolymerElement } from '@polymer/polymer';
+
+import { html, PolymerElement } from '@polymer/polymer';polymernfcvxzå
 import { ScrollFunctions } from '../mixins/scroll-functions.js';
 import { routingActions } from '../redux/actions.js';
 import './blog-list-page.js';

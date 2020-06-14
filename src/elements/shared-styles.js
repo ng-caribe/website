@@ -16,7 +16,7 @@ documentContainer.innerHTML = `<dom-module id="shared-styles">
         --light-primary-color: #D1C4E9;
         --text-primary-color: #512DA8;
         --accent-color: #FF5252;
-        --primary-background-color: #E5F4E3;
+        --primary-background-color: #FFFFFF;
         --primary-text-color: #424242;
         --secondary-text-color: #757575;
         --disabled-text-color: #BDBDBD;
@@ -29,10 +29,10 @@ documentContainer.innerHTML = `<dom-module id="shared-styles">
         --error-color: #e64a19;
 
         /* Custom */
-        --default-background-color: #E5F4E3;
-        --secondary-background-color: #E5F4E3;
-        --additional-background-color: #E5F4E3;
-        --contrast-additional-background-color: #E5F4E3;
+        --default-background-color: #FFFFFF;
+        --secondary-background-color: #FFFFFF;
+        --additional-background-color: #FFFFFF;
+        --contrast-additional-background-color: #FFFFFF;
         --animation: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
         --slideAnimation: 0.4s cubic-bezier(0, 0, 0.2, 1);

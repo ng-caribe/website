@@ -113,7 +113,7 @@ class HoverboardApp extends UtilsFunctions(ScrollFunctions(ReduxMixin(PolymerEle
       }
 
       .toolbar-logo {
-        --iron-image-height: 32px;
+        --iron-image-height: 70px;
       }
 
       app-header-layout {
@@ -166,7 +166,7 @@ class HoverboardApp extends UtilsFunctions(ScrollFunctions(ReduxMixin(PolymerEle
 
       <app-drawer id="drawer" slot="drawer" opened="[[ui.isDrawerOpened]]" swipe-open>
         <app-toolbar layout vertical start>
-          <plastic-image class="toolbar-logo" srcset="/images/logo-monochrome.svg" alt="{$ title $}"></plastic-image>
+          <plastic-image class="toolbar-logo" srcset="/images/logos/ng-caribe-full-color.png" alt="{$ title $}"></plastic-image>
           <h2 class="dates">{$ dates $}</h2>
           <h3 class="location">{$ location.short $}</h3>
         </app-toolbar>
