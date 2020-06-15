@@ -139,35 +139,35 @@ class FooterSocial extends PolymerElement {
 
     </style>
 
-    <div class="social-group share-block">
-      <div class="title">{$ share $}</div>
-      <div class="nav-inline">
-        <div class="share">
-          <paper-icon-button
-            class="share-facebook"
-            icon="hoverboard:facebook"
-            share="facebook"
-            on-click="share"
-            ga-on="click"
-            ga-event-category="social"
-            ga-event-action="share"
-            ga-event-label="facebook">
-          </paper-icon-button>
-        </div>
-        <div class="share">
-          <paper-icon-button
-            class="share-twitter"
-            icon="hoverboard:twitter"
-            share="twitter"
-            on-click="share"
-            ga-on="click"
-            ga-event-category="social"
-            ga-event-action="share"
-            ga-event-label="twitter">
-          </paper-icon-button>
-        </div>
-      </div>
-    </div>
+<!--    <div class="social-group share-block">-->
+<!--      <div class="title">{$ share $}</div>-->
+<!--      <div class="nav-inline">-->
+<!--        <div class="share">-->
+<!--          <paper-icon-button-->
+<!--            class="share-facebook"-->
+<!--            icon="hoverboard:facebook"-->
+<!--            share="facebook"-->
+<!--            on-click="share"-->
+<!--            ga-on="click"-->
+<!--            ga-event-category="social"-->
+<!--            ga-event-action="share"-->
+<!--            ga-event-label="facebook">-->
+<!--          </paper-icon-button>-->
+<!--        </div>-->
+<!--        <div class="share">-->
+<!--          <paper-icon-button-->
+<!--            class="share-twitter"-->
+<!--            icon="hoverboard:twitter"-->
+<!--            share="twitter"-->
+<!--            on-click="share"-->
+<!--            ga-on="click"-->
+<!--            ga-event-category="social"-->
+<!--            ga-event-action="share"-->
+<!--            ga-event-label="twitter">-->
+<!--          </paper-icon-button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
 
 <!--    <div class="social-group blog">-->
 <!--      <div class="title">-->

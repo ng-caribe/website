@@ -175,13 +175,16 @@ class HeaderToolbar extends ReduxMixin(PolymerElement) {
 <!--            <paper-button class="buy-button" primary>{$ buyTicket $}</paper-button>-->
 <!--          </a>-->
 
+          <paper-tab class="signin-tab" on-click="openBLMLink" link">
+            #BlackLivesMatter
+          </paper-tab>
+
           <a
-            href$="[[_getTicketUrl(tickets)]]"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/blog/posts/cancellation/"
             ga-on="click"
-            ga-event-category="ticket button"
-            ga-event-action="buy_click"
+            ga-event-category="blog"
+            ga-event-action="open post"
+            hidden="[[window.location.pathname === '/blog/posts/cancellation/']]"
           >
             <paper-button class="buy-button" primary invert>See the news</paper-button>
           </a>
@@ -338,13 +341,29 @@ class HeaderToolbar extends ReduxMixin(PolymerElement) {
     this.drawerOpened = true;
   }
 
-  signIn() {
-    dialogsActions.openDialog(DIALOGS.SIGNIN);
+  openBLMLink() {
+    Object
+      .assign(
+        document.createElement('a'),
+        { target: '_blank', href: 'https://secure.actblue.com/donate/naacp-1' },
+      ).click()
   }
 
-  signOut() {
-    userActions.signOut();
+  _openCancellationBlogPost() {
+    Object
+      .assign(
+        document.createElement('a'),
+        { href: '/blog/posts/cancellation' },
+      ).click()
   }
+
+  // signIn() {
+  //   dialogsActions.openDialog(DIALOGS.SIGNIN);
+  // }
+  //
+  // signOut() {
+  //   userActions.signOut();
+  // }
 
   _onScroll() {
     this.transparent = document.documentElement.scrollTop === 0;

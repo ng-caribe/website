@@ -1,5 +1,5 @@
 import '@polymer/iron-icon';
-import { html, PolymerElement } from '@polymer/polymer';
+import {html, PolymerElement} from '@polymer/polymer';
 import '../elements/about-block';
 import '../elements/about-organizer-block';
 import '../elements/featured-videos';
@@ -11,9 +11,9 @@ import '../elements/partners-block';
 import '../elements/speakers-block';
 import '../elements/subscribe-block';
 import '../elements/tickets-block';
-import { ReduxMixin } from '../mixins/redux-mixin';
-import { uiActions } from '../redux/actions';
-import { scrollToY } from '../utils/scrolling';
+import {ReduxMixin} from '../mixins/redux-mixin';
+import {uiActions} from '../redux/actions';
+import {scrollToY} from '../utils/scrolling';
 
 class HomePage extends ReduxMixin(PolymerElement) {
   static get template() {
@@ -175,16 +175,18 @@ class HomePage extends ReduxMixin(PolymerElement) {
 <!--              <iron-icon icon="hoverboard:ticket"></iron-icon>-->
 <!--              {$ buyTicket $}-->
 <!--            </paper-button>-->
+
             <paper-button
-              on-click="_scrollToTickets"
+              on-click="_openCancellationBlogPost"
               ga-on="click"
-              ga-event-category="tickets"
-              ga-event-action="scroll"
-              ga-event-label="hero block - scroll to tickets"
+              ga-event-category="blog"
+              ga-event-action="open post"
+              ga-event-label="hero block - open blog post"
               primary
             >
               See more
             </paper-button>
+
 
           </div>
 
@@ -304,6 +306,14 @@ class HomePage extends ReduxMixin(PolymerElement) {
     const ticketsBlockPositionY =
       (window as any).HOVERBOARD.Elements.Tickets.getBoundingClientRect().top - toolbarHeight;
     scrollToY(ticketsBlockPositionY, 600, 'easeInOutSine');
+  }
+
+  _openCancellationBlogPost() {
+    Object
+      .assign(
+        document.createElement('a'),
+        { href: '/blog/posts/cancellation' },
+      ).click()
   }
 
   _scrollNextBlock() {

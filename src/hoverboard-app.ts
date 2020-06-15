@@ -186,55 +186,55 @@ class HoverboardApp extends ReduxMixin(PolymerElement) {
           <app-toolbar layout vertical start>
             <plastic-image
               class="toolbar-logo"
-              srcset="/images/logo-monochrome.svg"
+              srcset="/images/logos/ng-caribe-full-color.png"
               alt="{$ title $}"
             ></plastic-image>
             <h2 class="dates">{$ dates $}</h2>
             <h3 class="location">{$ location.short $}</h3>
           </app-toolbar>
 
-          <div class="drawer-content" layout vertical justified flex>
-            <iron-selector
-              class="drawer-list"
-              selected="[[route.route]]"
-              attr-for-selected="path"
-              selected-class="selected"
-              role="navigation"
-            >
-              {% for nav in navigation %}
-              <a href="{$ nav.permalink $}" path="{$ nav.route $}" on-click="closeDrawer"
-                >{$ nav.label $}</a
-              >
-              {% endfor %}
-            </iron-selector>
+<!--          <div class="drawer-content" layout vertical justified flex>-->
+<!--            <iron-selector-->
+<!--              class="drawer-list"-->
+<!--              selected="[[route.route]]"-->
+<!--              attr-for-selected="path"-->
+<!--              selected-class="selected"-->
+<!--              role="navigation"-->
+<!--            >-->
+<!--              {% for nav in navigation %}-->
+<!--              <a href="{$ nav.permalink $}" path="{$ nav.route $}" on-click="closeDrawer"-->
+<!--                >{$ nav.label $}</a-->
+<!--              >-->
+<!--              {% endfor %}-->
+<!--            </iron-selector>-->
 
-            <div>
-              <a
-                class="bottom-drawer-link"
-                on-click="_onaddToHomeScreen"
-                hidden$="[[_isaddToHomeScreenHidden(addToHomeScreen, viewport.isLaptopPlus)]]"
-              >
-                {$ addToHomeScreen.cta $}
-              </a>
+<!--            <div>-->
+<!--              <a-->
+<!--                class="bottom-drawer-link"-->
+<!--                on-click="_onaddToHomeScreen"-->
+<!--                hidden$="[[_isaddToHomeScreenHidden(addToHomeScreen, viewport.isLaptopPlus)]]"-->
+<!--              >-->
+<!--                {$ addToHomeScreen.cta $}-->
+<!--              </a>-->
 
-              <a
-                class="bottom-drawer-link"
-                href$="[[_getTicketUrl(tickets)]]"
-                target="_blank"
-                rel="noopener noreferrer"
-                on-click="closeDrawer"
-                ga-on="click"
-                ga-event-category="ticket button"
-                ga-event-action="buy_click"
-                layout
-                horizontal
-                center
-              >
-                <span>{$ buyTicket $}</span>
-                <iron-icon icon="hoverboard:open-in-new"></iron-icon>
-              </a>
-            </div>
-          </div>
+<!--              <a-->
+<!--                class="bottom-drawer-link"-->
+<!--                href$="[[_getTicketUrl(tickets)]]"-->
+<!--                target="_blank"-->
+<!--                rel="noopener noreferrer"-->
+<!--                on-click="closeDrawer"-->
+<!--                ga-on="click"-->
+<!--                ga-event-category="ticket button"-->
+<!--                ga-event-action="buy_click"-->
+<!--                layout-->
+<!--                horizontal-->
+<!--                center-->
+<!--              >-->
+<!--                <span>{$ buyTicket $}</span>-->
+<!--                <iron-icon icon="hoverboard:open-in-new"></iron-icon>-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </div>-->
         </app-drawer>
 
         <app-header-layout id="headerLayout" fullbleed>
